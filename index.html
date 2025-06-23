@@ -29,7 +29,7 @@
       padding: 2rem;
       background-color: #161b22;
     }
-    #goUpBtn {
+    #PrivEsc {
       display: none; /* Hidden by default */
       position: fixed;
       bottom: 40px;
@@ -46,7 +46,7 @@
       transition: background-color 0.3s;
     }
 
-    #goUpBtn:hover {
+    #PrivEsc:hover {
       background-color: #333;
     }
     h1 {
@@ -153,23 +153,23 @@
   </nav>
 </header>
 
-  <button id="goUpBtn" title="Escalate Privileges"><img src="images/PrivEsc.jpg" alt="Escalate Privileges" height="10" style="margin-right: 20px;"></button>
+  <button id="PrivEsc" title="PrivEsc 👆"><img src="images/PrivEsc.jpg" alt="PrivEsc 👆" height="10";></button>
 
   <script>
     // Get the button
-    const goUpBtn = document.getElementById("goUpBtn");
+    const PrivEsc = document.getElementById("PrivEsc");
 
     // Show the button when user scrolls down 100px
     window.onscroll = function() {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        goUpBtn.style.display = "block";
+        PrivEsc.style.display = "block";
       } else {
-        goUpBtn.style.display = "none";
+        PrivEsc.style.display = "none";
       }
     };
 
     // When the user clicks the button, scroll to the top smoothly
-    goUpBtn.onclick = function() {
+    PrivEsc.onclick = function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
