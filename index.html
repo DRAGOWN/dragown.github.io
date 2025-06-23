@@ -98,6 +98,16 @@
       border-radius: 4px;
       margin-right: 20px;
     }
+    .button2 {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
     .cert-info h3 {
       margin: 0 0 10px;
@@ -121,15 +131,18 @@
       margin: 1rem 0;
       border-left: 5px solid #5bff58;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #5bff58;
-      color: #0d1117;
+    .green-button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
       border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .green-button:hover {
+      background-color: darkgreen;
     }
     footer {
       text-align: center;
@@ -188,7 +201,7 @@
   </nav>
 </header>
 
-<button id="PrivEsc" title="PrivEsc 👆">🔝</button>
+<button2 id="PrivEsc" title="PrivEsc 👆">🔝</button2>
 <script>
   const PrivEsc = document.getElementById("PrivEsc");
   window.onscroll = function() {
@@ -365,7 +378,7 @@
   <div class="project">
     <h3>CVE-2025-26264</h3>
     <p>CVE-2025-26264 - GeoVision GV-ASWeb with the version 6.1.2.0 or less, contains a Remote Code Execution (RCE) vulnerability within its Notification Settings feature. An authenticated attacker with "System Settings" privileges in ASWeb can exploit this flaw to execute arbitrary commands on the server, leading to a full system compromise.</p>
-    <a class="button" href="https://nvd.nist.gov/vuln/detail/CVE-2025-26264" target="_blank">View CVE</a>
+    <button class="green-button" href="https://nvd.nist.gov/vuln/detail/CVE-2025-26264" target="_blank">View CVE</button>
   </div>
 
   <div class="project">
