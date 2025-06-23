@@ -29,6 +29,26 @@
       padding: 2rem;
       background-color: #161b22;
     }
+    #goUpBtn {
+      display: none; /* Hidden by default */
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 100;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #555;
+      color: white;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    #goUpBtn:hover {
+      background-color: #333;
+    }
     h1 {
       margin: 0;
       color: #5bff58;
@@ -133,6 +153,13 @@
   </nav>
 </header>
 
+<div style="height:2000px; padding: 20px;">
+  <h1>Scroll Down to See the "Go Up" Button</h1>
+  <p>Keep scrolling down, then click the button to go back up.</p>
+</div>
+
+  <button id="goUpBtn" title="Go to top">⬆️ Top</button>
+  
 <section id="about">
   <h2>$ whoami</h2>
 
