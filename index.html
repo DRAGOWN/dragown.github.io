@@ -6,6 +6,20 @@
   <title>Giorgi Dograshvili | Penetration Tester</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    .green-button {
+      background-color: green;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .green-button:hover {
+      background-color: darkgreen;
+    }
+
     a {
       color: #5bff58;
       text-decoration: none;
@@ -28,7 +42,7 @@
     header {
       text-align: center;
       padding: 2rem;
-      background-color: #161b22;
+      background-color: ##14181f;
     }
     #PrivEsc {
       display: none;
@@ -39,7 +53,7 @@
       font-size: 25px;
       border: none;
       outline: none;
-      #background-color: #555;
+      background-color: #14181f;
       color: white;
       cursor: pointer;
       padding: 12px 16px;
@@ -48,12 +62,9 @@
     }
 
     #PrivEsc:hover {
-      background-color: #333;
+      background-color: #202938;
     }
-    h1 {
-      margin: 0;
-      color: #5bff58;
-    }
+
     nav a {
       color: #5bff58;
       margin: 0 1rem;
@@ -64,12 +75,6 @@
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
-    }
-    
-    h2 {
-      color: #5bff58;
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 0.5rem;
     }
     
     @media (max-width: 600px) {
@@ -109,12 +114,27 @@
       transition: background-color 0.3s ease;
     }
 
-    .cert-info h3 {
-      margin: 0 0 10px;
-      font-size: 1.2em;
-      font-weight: bold;
+    h1 {
+      color: #5bff58;
+      font-size: 1.5em;
+      margin: 0 0 15px;
+      padding-bottom: 0.2rem;
+      border-bottom: 3px solid #30363d;
     }
 
+    /* Heading 2 Styles */
+    h2 {
+      color: #5bff58;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0 0 12px;
+    }
+
+    /* Heading 3 Styles */
+    h3 {
+      font-size: 0.9em;
+      margin: 0 0 9px;
+    }
     .cert-info p {
       margin: 0;
       color: #555;
@@ -131,19 +151,7 @@
       margin: 1rem 0;
       border-left: 5px solid #5bff58;
     }
-    .green-button {
-      background-color: green;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
 
-    .green-button:hover {
-      background-color: darkgreen;
-    }
     footer {
       text-align: center;
       background-color: #161b22;
@@ -171,7 +179,8 @@
     }
 
     .social-icons a:hover {
-      color: #0077b5;    }
+      color: #0077b5;
+    }
 
     .social-icons a.facebook:hover { color: #3b5998; }
     .social-icons a.twitter:hover { color: #1da1f2; }
@@ -187,6 +196,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -270,7 +280,7 @@
 </section>
 
 <section id="skills">
-  <h2>Skills & Tools</h2>
+  <h1>Skills & Tools</h1>
   <ul>
     <li>💻 Linux distributions for Offensive Security - Kali Linux, Parrot OS.</li>
     <li>💼 Penetration Testing: Active Directory, Web Applications, Mobile Applications, Desktop Applications, APIs, OSINT.</li>
@@ -281,7 +291,7 @@
 </section>
 
 <section id="certs">
-  <h2>Certifications</h2>
+  <h1>Certifications</h1>
   <!-- Certification Block 1 -->
   <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
     <img src="images/osep.jpg" alt="OSEP Certificate" height="100" style="margin-right: 20px;">
@@ -371,56 +381,56 @@
   </div>
 </section>
 
-
 <section id="projects">
-  <h2>CVEs</h2>
+  <h1>CVEs</h1>
 
   <div class="project">
-    <h3>CVE-2025-26264</h3>
+    <h2>CVE-2025-26264</h2>
     <p>CVE-2025-26264 - GeoVision GV-ASWeb with the version 6.1.2.0 or less, contains a Remote Code Execution (RCE) vulnerability within its Notification Settings feature. An authenticated attacker with "System Settings" privileges in ASWeb can exploit this flaw to execute arbitrary commands on the server, leading to a full system compromise.</p>
-    <button class="green-button" href="https://nvd.nist.gov/vuln/detail/CVE-2025-26264" target="_blank">View CVE</button>
+    <button class="green-button" onclick="window.open('https://nvd.nist.gov/vuln/detail/CVE-2025-26264','_blank')">View CVE</button>
   </div>
 
   <div class="project">
-    <h3>CVE-2024-56903</h3>
-    <p>CVE-2024-56903 - Geovision GV-ASManager web application with the version 6.1.1.0 or less allows attackers to modify POST request method with the GET againsts critical functionalities, such as account management. This vulnerability is used in chain with CVE-2024-56901 for a successful CSRF attack.</p>
-    <a class="button" href="https://www.cve.org/CVERecord?id=CVE-2024-56903" target="_blank">View CVE</a>
+    <h2>CVE-2024-56901</h2>
+    <p>CVE-2024-56901 - A Cross-Site Request Forgery (CSRF) vulnerability in Geovision GV-ASManager web application with the version 6.1.1.0 or less that allows attackers to arbitrarily create Admin accounts via a crafted GET request method. This vulnerability is used in chain with CVE-2024-56903 for a successful CSRF attack.</p>
+    <button class="green-button" onclick="window.open('https://www.cve.org/CVERecord?id=CVE-2024-56901','_blank')">View CVE</button>
   </div>
 
   <div class="project">
-    <h3>CVE-2025-26263</h3>
-    <p>CVE-2025-26263 - GeoVision ASManager Windows desktop application with the version 6.1.2.0 or less, is vulnerable to credentials disclosure due to improper memory handling in the ASManagerService.exe process.</p>
-    <a class="button" href="https://www.cve.org/CVERecord?id=CVE-2025-26263" target="_blank">View CVE</a>
+    <h2>CVE-2024-56898</h2>
+    <p>CVE-2024-56898 - Broken access control vulnerability in Geovision GV-ASManager web application with version v6.1.0.0 or less. This vulnerability allows low privilege users perform actions that they aren't authorized to, which can be leveraged to escalate privileges, create, modify or delete accounts.</p>
+    <button class="green-button" onclick="window.open('https://www.cve.org/CVERecord?id=CVE-2024-56898','_blank')">View CVE</button>
   </div>
 
   <div class="project">
-    <h3>CVE-2024-56902</h3>
+    <h2>CVE-2024-56902</h2>
     <p>CVE-2024-56902 - Information disclosure vulnerability in Geovision GV-ASManager web application with the version v6.1.0.0 or less, which discloses account information, including cleartext password.</p>
-    <a class="button" href="https://www.cve.org/CVERecord?id=CVE-2024-56902" target="_blank">View CVE</a>
+    <button class="green-button" onclick="window.open('https://www.cve.org/CVERecord?id=CVE-2024-56902','_blank')">View CVE</button>
   </div>
   
   <div class="project">
-    <h3>CVE-2024-56898</h3>
-    <p>CVE-2024-56898 - Broken access control vulnerability in Geovision GV-ASManager web application with version v6.1.0.0 or less. This vulnerability allows low privilege users perform actions that they aren't authorized to, which can be leveraged to escalate privileges, create, modify or delete accounts.</p>
-    <a class="button" href="https://www.cve.org/CVERecord?id=CVE-2024-56898" target="_blank">View CVE</a>
-  </div>
-
-  <div class="project">
-    <h3>CVE-2024-56901</h3>
-    <p>CVE-2024-56901 - A Cross-Site Request Forgery (CSRF) vulnerability in Geovision GV-ASManager web application with the version 6.1.1.0 or less that allows attackers to arbitrarily create Admin accounts via a crafted GET request method. This vulnerability is used in chain with CVE-2024-56903 for a successful CSRF attack.</p>
-    <a class="button" href="https://www.cve.org/CVERecord?id=CVE-2024-56901" target="_blank">View CVE</a>
-  </div>
-
-  <div class="project">
-    <h3>CVE-2023-24709</h3>
+    <h2>CVE-2023-24709</h2>
     <p>In Paradox Security System IPR512 web panel, an unauthenticated user can input JavaScript string, such as "</script>" that will overwrite configurations in the file "login.xml" and cause the login form to crash and make it unavailable.</p>
-    <a class="button" href="https://nvd.nist.gov/vuln/detail/CVE-2023-24709" target="_blank">View CVE</a>
+    <button class="green-button" onclick="window.open('https://nvd.nist.gov/vuln/detail/CVE-2023-24709','_blank')">View CVE</button>
+  </div>
+
+  <div class="project">
+    <h2>CVE-2024-56903</h2>
+    <p>CVE-2024-56903 - Geovision GV-ASManager web application with the version 6.1.1.0 or less allows attackers to modify POST request method with the GET againsts critical functionalities, such as account management. This vulnerability is used in chain with CVE-2024-56901 for a successful CSRF attack.</p>
+    <button class="green-button" onclick="window.open('https://www.cve.org/CVERecord?id=CVE-2024-56903','_blank')">View CVE</button>
+  </div>
+
+  <div class="project">
+    <h2>CVE-2025-26263</h2>
+    <p>CVE-2025-26263 - GeoVision ASManager Windows desktop application with the version 6.1.2.0 or less, is vulnerable to credentials disclosure due to improper memory handling in the ASManagerService.exe process.</p>
+    <button class="green-button" onclick="window.open('https://www.cve.org/CVERecord?id=CVE-2025-26263','_blank')">View CVE</button>
   </div>
 </section>
 </body>
 
+
 <section id="contact">
-    <h2>Contact</h2>
+    <h1>Contact</h1>
     <div class="social-icons">
       <a href="https://linkedin.com/in/giorgi-dograshvili" target="_blank" class="linkedin" title="LinkedIn">
         <i class="fab fa-linkedin-in fa-xl"></i>
