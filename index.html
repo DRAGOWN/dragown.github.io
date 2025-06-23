@@ -6,6 +6,24 @@
   <title>Giorgi Dograshvili | Penetration Tester</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    h1 {
+      color: #5bff58;
+      font-size: 1.7em;
+      margin: 0;
+      margin: 12px 0px 12px;
+    }
+
+    h2 {
+      color: #5bff58;
+      font-weight: bold;
+      margin: 9 0 9px;
+    }
+
+    h3 {
+      font-size: 0.9em;
+      margin: 5 0 5px;
+    }
+
     .green-button {
       background-color: green;
       color: white;
@@ -114,27 +132,7 @@
       transition: background-color 0.3s ease;
     }
 
-    h1 {
-      color: #5bff58;
-      font-size: 1.5em;
-      margin: 0 0 15px;
-      padding-bottom: 0.2rem;
-      border-bottom: 3px solid #30363d;
-    }
 
-    /* Heading 2 Styles */
-    h2 {
-      color: #5bff58;
-      font-size: 1.2em;
-      font-weight: bold;
-      margin: 0 0 12px;
-    }
-
-    /* Heading 3 Styles */
-    h3 {
-      font-size: 0.9em;
-      margin: 0 0 9px;
-    }
     .cert-info p {
       margin: 0;
       color: #555;
@@ -228,7 +226,7 @@
   </script>
 
 <section id="about">
-  <h2>$ whoami</h2>
+  <h1>$ whoami</h1>
 
   <p>
     Giorgi is a cybersecurity professional with hands-on expertise in penetration testing across a wide variety of digital environments. 
@@ -425,6 +423,7 @@
     <p>CVE-2025-26263 - GeoVision ASManager Windows desktop application with the version 6.1.2.0 or less, is vulnerable to credentials disclosure due to improper memory handling in the ASManagerService.exe process.</p>
     <button class="green-button" onclick="window.open('https://www.cve.org/CVERecord?id=CVE-2025-26263','_blank')">View CVE</button>
   </div>
+
 </section>
 </body>
 
@@ -456,14 +455,17 @@
 </div>
 </section>
 
-<div>
-<footer>
-<div>
-    GIORGI DOGRASHVILI &copy;
-    <span id="copyright">
-        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-    </span>
-</div>
+<footer style="text-align: center; padding: 20px; margin-top: 40px; background-color: #1a1a1a; color: #5bff58;">
+  <div>
+    GIORGI DOGRASHVILI &copy; 
+    <span id="copyright-year"></span>
+  </div>
+
+  <script>
+    document.getElementById('copyright-year')
+      .textContent = ' ' + new Date().getFullYear();
+  </script>
 </footer>
+
 </body>
 </html>
