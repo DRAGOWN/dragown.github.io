@@ -159,6 +159,25 @@
 </div>
 
   <button id="goUpBtn" title="Go to top">⬆️ Top</button>
+
+  <script>
+    // Get the button
+    const goUpBtn = document.getElementById("goUpBtn");
+
+    // Show the button when user scrolls down 100px
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goUpBtn.style.display = "block";
+      } else {
+        goUpBtn.style.display = "none";
+      }
+    };
+
+    // When the user clicks the button, scroll to the top smoothly
+    goUpBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
   
 <section id="about">
   <h2>$ whoami</h2>
@@ -380,24 +399,6 @@
     </span>
 </div>
 </footer>
-
-<script>
-  const goUpBtn = document.getElementById('goUpBtn');
-
-  // Show button when scrolling down 100px from top
-  window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      goUpBtn.style.display = "block";
-    } else {
-      goUpBtn.style.display = "none";
-    }
-  };
-
-  // Scroll smoothly to top when button clicked
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
 
   <script type="application/ld+json">
 {
