@@ -1,40 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://dragown.github.io/</loc>
+    <lastmod>2025-06-24T15:34:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dragown.github.io/#about</loc>
+    <lastmod>2025-06-24T15:34:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+    <url>
+    <loc>https://dragown.github.io/#skills</loc>
+    <lastmod>2025-06-24T15:34:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+    <url>
+    <loc>https://dragown.github.io/#certs</loc>
+    <lastmod>2025-06-24T15:34:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+    <url>
+    <loc>https://dragown.github.io/#cves</loc>
+    <lastmod>2025-06-24T15:34:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://dragown.github.io/#contact</loc>
+    <lastmod>2025-06-24T15:34:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
   
-  <url>
-    <loc>https://linkedin.com/in/giorgi-dograshvili</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://dragown.medium.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://github.com/DRAGOWN</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://credentials.offsec.com/profile/dragown/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.exploit-db.com/?author=11884</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://vulners.com/search?query=reporter:%22Giorgi%20Dograshvili%22</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
 </urlset>
