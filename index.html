@@ -211,7 +211,7 @@
   </nav>
 </header>
 
-<button2 id="PrivEsc" title="PrivEsc 👆">🔝</button2>
+'''<button2 id="PrivEsc" title="PrivEsc 👆">🔝</button2>
 <script>
   const PrivEsc = document.getElementById("PrivEsc");
   window.onscroll = function() {
@@ -225,7 +225,54 @@
     PrivEsc.onclick = function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-  </script>
+  </script>'''
+
+
+<script>
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        const scrollImage = document.getElementById('scrollUpImage');
+
+        // Define the image URLs
+        const initialImage = 'https://github.com/DRAGOWN/dragown.github.io/blob/main/images/PrivNorm.png'; // Blue "UP" arrow
+        const clickedImage = 'https://github.com/DRAGOWN/dragown.github.io/blob/main/images/PrivUp.png'; // Green checkmark
+
+        // 1. SCROLL DETECTION: Show/Hide the button
+        window.onscroll = function() {
+            // Get the current scroll position
+            const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+            
+            // Show the button when scrolled past 300 pixels
+            if (scrollPosition > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+            
+            // Reset the image to the initial 'UP' state when the button is not visible
+            if (scrollBtn.style.display === "none" && scrollImage.src !== initialImage) {
+                 scrollImage.src = initialImage;
+            }
+        };
+
+        // 2. CLICK ACTION: Change image AND scroll up
+        scrollBtn.onclick = function() {
+            // A. **Change the image source immediately**
+            scrollImage.src = clickedImage; 
+            
+            // B. Smoothly scroll the window to the top (0, 0)
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Provides a nice animation
+            });
+            
+            // Note: Since the scroll to the top happens quickly, 
+            // the button will become hidden by the `window.onscroll` logic, 
+            // and the image will revert to the initial state when the user scrolls down again.
+        };
+    </script>
+
+
+  
 
 <section id="about">
   <h1>$ whoami</h1>
