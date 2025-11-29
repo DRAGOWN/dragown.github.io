@@ -71,22 +71,17 @@
             padding: 20px;
         }
 
-        /* * STYLING FOR THE BUTTON CONTAINER (YOUR 'PrivEsc' ID)
-         * Using a fixed position at the bottom-left corner.
-         */
         #PrivEsc {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 99;
             cursor: pointer;
-            /* Hidden by default, JavaScript will show it */
             display: none; 
-            border: none; /* Remove default button border if you were using <button> */
-            background: none; /* Remove default background */
+            border: none;
+            background: none;
         }
 
-        /* STYLING FOR THE IMAGE */
         #PrivEscImage {
             box-shadow: 0 4px 8px rgba(0,0,0,0.4);
             transition: transform 0.2s ease-in-out; 
@@ -223,43 +218,39 @@
   </nav>
 </header>
 
-<div id="PrivEsc" title="PrivEsc 👆">
+<div id="PrivEsc" title="PrivEsc ✊">
         <img id="PrivEscImage" 
-             src="https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivNorm.pngP" 
-             alt="Scroll Up Button">
+             src="https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivNorm.png" 
+             alt="He will scroll it up for you">
     </div>
 
     <script>
         const PrivEsc = document.getElementById("PrivEsc");
         const PrivEscImage = document.getElementById("PrivEscImage");
         
-        // Define your two image URLs
-        const initialImage = 'https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivNorm.png'; // Blue "UP" arrow
-        const clickedImage = 'https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivUp.png'; // Green checkmark
+       
+        const initialImage = 'https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivNorm.png';
+        const clickedImage = 'https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivUp.png';
 
-        // 1. SCROLL DETECTION (Your existing logic)
+     
         window.onscroll = function() {
-            // Get the current scroll position
+        
             const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
 
-            if (scrollPosition > 100) { // Using your 100px threshold
+            if (scrollPosition > 100) {
                 PrivEsc.style.display = "block";
             } else {
                 PrivEsc.style.display = "none";
             }
             
-            // Reset the image when the button disappears (i.e., when scrolling back to the top)
             if (PrivEsc.style.display === "none") {
                  PrivEscImage.src = initialImage;
             }
         };
 
-        // 2. CLICK ACTION: Change image AND scroll up
         PrivEsc.onclick = function() {
-            // A. **CHANGE THE IMAGE**
             PrivEscImage.src = clickedImage; 
             
-            // B. Perform the smooth scroll to the top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     </script>
@@ -269,42 +260,34 @@
         const scrollBtn = document.getElementById('scrollToTopBtn');
         const scrollImage = document.getElementById('scrollUpImage');
 
-        // Define the image URLs
-        const initialImage = 'https://github.com/DRAGOWN/dragown.github.io/blob/main/images/PrivNorm.png'; // Blue "UP" arrow
-        const clickedImage = 'https://github.com/DRAGOWN/dragown.github.io/blob/main/images/PrivUp.png'; // Green checkmark
+        const initialImage = 'https://github.com/DRAGOWN/dragown.github.io/blob/main/images/PrivNorm.png';
+        const clickedImage = 'https://github.com/DRAGOWN/dragown.github.io/blob/main/images/PrivUp.png';
 
-        // 1. SCROLL DETECTION: Show/Hide the button
         window.onscroll = function() {
-            // Get the current scroll position
             const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
             
-            // Show the button when scrolled past 300 pixels
             if (scrollPosition > 300) {
                 scrollBtn.style.display = "block";
             } else {
                 scrollBtn.style.display = "none";
             }
             
-            // Reset the image to the initial 'UP' state when the button is not visible
+           
             if (scrollBtn.style.display === "none" && scrollImage.src !== initialImage) {
                  scrollImage.src = initialImage;
             }
         };
 
-        // 2. CLICK ACTION: Change image AND scroll up
+      
         scrollBtn.onclick = function() {
-            // A. **Change the image source immediately**
+            
             scrollImage.src = clickedImage; 
             
-            // B. Smoothly scroll the window to the top (0, 0)
+            
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Provides a nice animation
+                behavior: 'smooth'
             });
-            
-            // Note: Since the scroll to the top happens quickly, 
-            // the button will become hidden by the `window.onscroll` logic, 
-            // and the image will revert to the initial state when the user scrolls down again.
         };
     </script>
 
