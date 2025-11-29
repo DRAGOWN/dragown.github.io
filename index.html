@@ -64,27 +64,42 @@
       padding: 2rem;
       background-color: ##14181f;
     }
-    #PrivEsc {
-      display: none;
-      position: fixed;
-      bottom: 40px;
-      right: 40px;
-      z-index: 100;
-      font-size: 25px;
-      border: none;
-      outline: none;
-      background-color: #14181f;
-      color: white;
-      cursor: pointer;
-      padding: 12px 16px;
-      border-radius: 4px;
-      transition: background-color 0.7s;
-    }
 
-    #PrivEsc:hover {
-      background-color: #202938;
-    }
 
+        .page-content {
+            height: 200vh;
+            padding: 20px;
+        }
+
+        /* * STYLING FOR THE BUTTON CONTAINER (YOUR 'PrivEsc' ID)
+         * Using a fixed position at the bottom-left corner.
+         */
+        #PrivEsc {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 99;
+            cursor: pointer;
+            /* Hidden by default, JavaScript will show it */
+            display: none; 
+            border: none; /* Remove default button border if you were using <button> */
+            background: none; /* Remove default background */
+        }
+
+        /* STYLING FOR THE IMAGE */
+        #PrivEscImage {
+            width: 60px; /* Adjust size as needed */
+            height: 60px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            border-radius: 50%; /* Make it round */
+            transition: transform 0.2s ease-in-out; 
+            display: block; 
+        }
+
+        #PrivEscImage:hover {
+            transform: scale(1.1);
+        }
+    
     nav a {
       color: #5bff58;
       margin: 0 1rem;
@@ -211,21 +226,46 @@
   </nav>
 </header>
 
-'''<button2 id="PrivEsc" title="PrivEsc 👆">🔝</button2>
-<script>
-  const PrivEsc = document.getElementById("PrivEsc");
-  window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      PrivEsc.style.display = "block";
-      } 
-      else {
-        PrivEsc.style.display = "none";
-      }
-    };
-    PrivEsc.onclick = function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  </script>'''
+<div id="PrivEsc" title="PrivEsc 👆">
+        <img id="PrivEscImage" 
+             src="https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivNorm.pngP" 
+             alt="Scroll Up Button">
+    </div>
+
+    <script>
+        const PrivEsc = document.getElementById("PrivEsc");
+        const PrivEscImage = document.getElementById("PrivEscImage");
+        
+        // Define your two image URLs
+        const initialImage = 'https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivNorm.png'; // Blue "UP" arrow
+        const clickedImage = 'https://raw.githubusercontent.com/DRAGOWN/dragown.github.io/refs/heads/main/images/PrivUp.png'; // Green checkmark
+
+        // 1. SCROLL DETECTION (Your existing logic)
+        window.onscroll = function() {
+            // Get the current scroll position
+            const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+
+            if (scrollPosition > 100) { // Using your 100px threshold
+                PrivEsc.style.display = "block";
+            } else {
+                PrivEsc.style.display = "none";
+            }
+            
+            // Reset the image when the button disappears (i.e., when scrolling back to the top)
+            if (PrivEsc.style.display === "none") {
+                 PrivEscImage.src = initialImage;
+            }
+        };
+
+        // 2. CLICK ACTION: Change image AND scroll up
+        PrivEsc.onclick = function() {
+            // A. **CHANGE THE IMAGE**
+            PrivEscImage.src = clickedImage; 
+            
+            // B. Perform the smooth scroll to the top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
 
 
 <script>
